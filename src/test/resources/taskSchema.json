@@ -1,0 +1,44 @@
+{
+   "type": "object",
+    "properties": {
+      "id": {
+        "type": "number"
+      },
+      "title": {
+        "type": "string"
+      },
+      "description": {
+        "type": ["string" , "null"]
+      },
+      "closedAt": {
+        "type": ["string" , "null"]
+      },
+      "user": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "name": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "username"
+        ]
+      },
+      "status": {
+        "type": "string",
+        "enum": ["OPEN", "CLOSE"]
+      }
+    },
+    "required": [
+      "title",
+      "user",
+      "status"
+    ]
+}
